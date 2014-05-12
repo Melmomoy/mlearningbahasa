@@ -9,6 +9,52 @@
 	<link rel="stylesheet" href="../css/themese/default/background.css">
 	<script src="../js/jquery.js"></script>
 	<script src="../js/jquery.mobile-1.4.2.min.js"></script>
+	<script src="../js/question.js"></script>
+    <script src="../js/back-to-top.js"></script>
+	<script language="JavaScript">
+<!--
+
+var numQues = 5;
+var numChoi = 2;
+
+var answers = new Array(5);
+answers[0] = "B";
+answers[1] = "S";
+answers[2] = "S";
+answers[3] = "B";
+answers[4] = "S";
+
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var currSelection;
+
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          score++;
+          break;
+        }
+      }
+    }
+  }
+
+  score = Math.round(score/numQues*100);
+  form.percentage.value = score + "%";
+
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+
+}
+
+// -->
+</script>
 </head>
 	<body>
 	
@@ -18,31 +64,211 @@
 			<a href="../toolbar/" data-rel="back" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-back">Back</a>
 		<h1>Learn Bahasa</h1>
 		</div>
-		<h3>Lesson<h3>
+		<h3>Lesson 1</h3>
+		<p align="justify">In this unit you will learn how to : Greet people , Thank people , Number , Use the word <i>ini</i> dan <i> itu</i> , ask using apa and make a statement</p>
 			<div data-role="content" >
 					<ul data-role="listview" data-ajax="false" data-inset="true" data-theme="a">
 						<li data-role="list-divider">Lesson 1</li>
+						<li><a href="#menu_dialog1">Dialogues</a></li>						
 						<li><a href="#menu_greeting">Greeting</a></li>
 						<li><a href="#menu_number">number</a></li>
-						<li><a href="#menu_grammar">Grammar</a></li>
-						
-																		
+						<li><a href="#menu_grammar">Tata Bahasa</a></li>									
 					</ul>
 				</div>
 	</div>
+	
+	<div id="menu_dialog1" data-role="page" data-position="fixed" data-theme="a">
+			
+		<div data-role="header">
+			<a href="../toolbar/" data-rel="back" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-back">Back</a>
+				
+			<h2>Learn Bahasa</h2>
+		</div>
+		
+		<div data-role="content" >
+			<h3><b> A. Percakapan </b></h3>
+			<p><h2><b><center>Di kedutaan Besar Indonesia</center></b></h2></p>
+			<P align="justify"> Billy Smith and Jane Fairchild went to Indonesian Embassy in Canverra, Australia. Right now, they are in
+				front of the counter to apply visa to visit Indonesia.</p>
+				
+				<table data-role="table" class="ui-responsive">
+				  <thead>
+					<tr>
+					  <th></th>
+					  <th></th>					  
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <td>Petugas </td>
+					  <td>: Selamat Pagi. </br><small>&nbsp; &nbsp;Good morning.</small></td>          
+					</tr>		
+					<tr>
+					  <td>Billy</td>		  
+					  <td>: Selamat pagi. Saya Billy Smith. Ini teman saya, Jane Fairchild. Kami mau membuat visa.</br>
+					  <small>&nbsp; &nbsp;Good morning. I am Billy Smith. This is my friend, Jane Fairchild. We want to apply for visa.</small></td>
+					</tr>
+					
+					<tr>
+					  <td>Petugas </td>
+					  <td>: Anda pernah ke Indonesia? </br>
+					  <small>&nbsp; &nbsp;Have u ever visited Indonesia before?.</small></td>          
+					</tr>		
+					<tr>
+					  <td>Billy</td>		  
+					  <td>: Belum.</br>
+					  <small>&nbsp; &nbsp;Not yet.</small></td>
+					</tr>
+					
+					<tr>
+					  <td>Petugas </td>
+					  <td>: Boleh saya melihat paspor anda? </br>
+					  <small>&nbsp; &nbsp;May i see your passport?</small></td>          
+					</tr>		
+					<tr>
+					  <td>Billy</td>		  
+					  <td>: Ya. ini paspor kami. </br>
+					  <small>&nbsp; &nbsp;Yes. Here our passport.</small></td>
+					</tr>
+					
+					<tr>
+					  <td>Petugas </td>
+					  <td>: Terima kasih. Apa tujuan anda datang ke Indonesia? </br>
+					  <small>&nbsp; &nbsp;Thank you. What is your purpose of coming to Indonesia?</small></td>          
+					</tr>		
+					<tr>
+					  <td>Billy</td>		  
+					  <td>: Kami mau berwisata. </br>
+					  <small>&nbsp; &nbsp;We will make a tour.</small></td>
+					</tr>
+					<tr>
+					  <td>Petugas </td>
+					  <td>: Berapa lama? </br>
+					  <small>&nbsp; &nbsp;How long?</small></td>          
+					</tr>		
+					<tr>
+					  <td>Billy</td>		  
+					  <td>: Dua minggu. </br>
+					  <small>&nbsp; &nbsp; Two weeks.</small></td>
+					</tr>
+					<tr>
+					  <td>Petugas </td>
+					  <td>: Oh. Anda dapat membuat visa langsung di Bandara Soekarno-Hatta.</br>
+					  <small>&nbsp; &nbsp;Oh. You can apply for it directly at Soekarno-Hatta airport </small></td>          
+					</tr>		
+					<tr>
+					  <td>Billy</td>		  
+					  <td>: Baiklah. Terima kasih. </br>
+					  <small>&nbsp; &nbsp;All right. Thank you.</small></td>
+					</tr>
+					<tr>
+					  <td>Petugas </td>
+					  <td>: Sama-sama. Selamat berwisata. </br>
+					  <small>&nbsp; &nbsp;You are welcome. Have a nice trip.</small></td>          
+					</tr>		
+						 
+				  </tbody>
+				</table>
+		</div>
+	
+	<!-- popup-->
+	
+	<div data-role="main" class="ui-content">
+    <a href="#catatan1" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Catatan Kebahasaan</a>
+
+    <div data-role="popup" id="catatan1" class="ui-content">
+      <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+	
+			<table data-role="table" class="ui-responsive">
+			  <thead>
+				<tr>
+				  <th></th>
+				  <th></th>
+				</tr>
+			  </thead>
+			  
+			  <tbody>
+				<tr>
+					<td>(1)</td>
+					<td>In a close or an informal conversation <i> selamat pagi</i> is often abbreviated to <i>pagi</i>, as well as
+					<i> selamat siang</i> or <i>selamat malam</i> is also abbreviated to <i>siang</i> or <i> malam</i>.</td>
+				</tr>
+				<tr>
+					<td>(2)</td>
+					<td>Bandara is the abbreviation of <i> bandar udara</i> "airport" or. For example, <i>Bandara Soekarno-Hatta</i> means
+					<i> bandar udara Soekarno-Hatta</i>.</td>
+				</tr>
+				<tr>
+					<td>(3)</td>
+					<td>In a formal conversation, the expression of <i> terima kasih</i> is said completely. However, In an informal situation 
+					<i>terima kasih</i> is often abbreviated to <i>makasih</i> even <i> trims</i>.</td>
+				</tr>
+					<td>(4)</td>
+					<td>In responding to thanking, <i> sama-sama</i> is interchangeable with <i>kembali</i>.</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+		</div>
+		
+		<div data-role="main" class="ui-content">
+		<a href="#budaya1" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Catatan Budaya</a>
+						
+						
+		 <div data-role="popup" id="budaya1" class="ui-content">
+		  <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
+	
+			<table data-role="table" class="ui-responsive">
+			  <thead>
+				<tr>
+				  <th></th>
+				  <th></th>
+				</tr>
+			  </thead>
+			  
+			  <tbody>
+				<tr>
+					
+					<td><i> KTP (Kartu Tanda Penduduk)</i> is an Indonesian identity card in which there are the owner identities, such as 
+					name, addres, date of birth, marital status, blood type, religion,and occupation.</td>
+				</tr>
+				
+				</tr>
+			</tbody>
+			</table>
+		</div>
+		</div>
+		<p><a href="../menu_quiz/p_less1.html" rel="external" data-role="button" >Latihan Pemahaman </a></p>
+		
+		
+	
+			
+		<div data-role="footer" data-position="fixed">
+        	<center><font size="-5">Copyright@2014 Learn Bahasa</font></center>
+        </div>
+	</div>
+	<!-- Batas menu dialog lesson 1-->
+	
 	<div id="menu_greeting" data-role="page" data-position="fixed" data-theme="a">
 			
 		<div data-role="header">
 			<a href="../toolbar/" data-rel="back" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-back">Back</a>
 				
-			<h2>Learn Bahasa - Lesson Greeting</h2>
+			<h2>Learn Bahasa </h2>
 		</div>
 		
 		<div data-role="content" >
-			<h2> Lesson Greeting</h2>
+			<h2> B. Kosakata dan Ungkapan</h2>
 				<p><b>Ungkapan Salam</b></p>
 				
-				<table cellpadding="5">
+			<table data-role="table" class="ui-responsive">
+				  <thead>
+					<tr>
+					  <th></th>
+					  <th></th>					  
+					</tr>
+				  </thead>
+				  <tbody>
 						<tr>
 						  <td>Selamat pagi</td>
 						  <td><i>Good morning</i></td>		
@@ -71,10 +297,12 @@
 						  <td>Selamat Ulangtahun</td>
 						  <td><i>Happy birthday</i></td>		
 						 </tr>
+					<tbody>
 				</table><br>
+			
 			<p align="justify"> In Indonesia ,there some words that refer to certain time , those are pagi,siang , sore dan malam.
 			In line with that,the expression of <i>Selamat pagi</i> is commonly used between 04.00-10.00.<i> Selamat siang</i> used between 10.00-14.00. <i>Selamat sore </i>
-			is between 14.00-18.30 ,and <i>Selamat malam</i> is between 18.30-04.00. Besides, between 16.00-18.30 the expression of <i>Selamat petang</i> is also used. 
+			is between 14.00-18.30 , and <i>Selamat malam</i> is between 18.30-04.00. Besides, between 16.00-18.30 the expression of <i>Selamat petang</i> is also used. 
 			Meanwhile ,time between 00.01-04.00 is called <i>Dini hari</i>, but the expression of <i>Selamat Dini hari</i> is never used. </p>
 			
 			<p><b>Salam Perjumpaan</b><p>
@@ -139,13 +367,16 @@
 						 
 			</table>
 			
-			
 		</div>
-			
 		<div data-role="footer" data-position="fixed">
         	<center><font size="-5">Copyright@2014 Learn Bahasa</font></center>
         </div>
 	</div>
+	
+		
+		
+	
+	<!--Batas Lesson greeting -->
 	
 	<div id="menu_number" data-role="page" data-position="fixed" data-theme="a">
 	
@@ -343,22 +574,8 @@
 			<center><font size="-5">Copyright@2014 Learn Bahasa</font></center>
 		</div>
 	</div>
+	<!--batas menu lesson number-->
 	
-	
-	<div id="menu_ini" data-role="page" data-position="fixed" data-theme="a">
-	
-		<div data-role="header">
-			<a href="../toolbar/" data-rel="back" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-back">Back</a>
-			<h2>Learn Bahasa - Lesson Numeric</h2>
-		</div>
-		<div data-role="content">
-			<h2>Page Lesson Body</h2>
-				<p>Page Lesson Body</p>
-		</div>
-		<div data-role="footer" data-position="fixed">
-			<center><font size="-5">Copyright@2014 Learn Bahasa</font></center>
-		</div>
-	</div>
 	
 	<div id="menu_grammar" data-role="page" data-position="fixed" data-theme="a">
 	<div data-role="header">
@@ -366,32 +583,43 @@
 			<h2>Learn Bahasa - Lesson Grammar</h2>
 		</div>
 		<div data-role="content">
-			<h2>Page Lesson Grammar</h2>
-				<p><b><i>ini</i> dan <i>itu</i></b></p>
+			<h2>C.Grammar</h2>
+				<p><b>1. <i>ini</i> dan <i>itu</i></b></p>
 				<p align="justify"> <i>Ini </i> used to refer something which is close to the speaker. While <i>itu</i> is used to refer
 				to something which is far or quite far from the speaker</p>for the example : </br> </p>
-				1. Ini Paspor </br>
-				<small> this is a pasport</small></br>
-				2. Itu Buku</br>
-				<small> that is a book </small></br>
-				3.Ini Billy </br>
-				<small> This is Billy </small></br>
-				4. Itu Jane </br>
-				<small> That is Jane </small></br>
-				</br>
-				<p><b>Kata tanya <i> Apa </i></b></p>
+				
+				<table cellpadding="5">
+						<tr>
+						<td> (1)</td>
+						  <td>Ini Paspor. </br><small> this is a pasport.</small></br></td>
+						</tr>
+						<tr>
+						<td> (2)</td>
+						  <td>Itu Buku. </br><small> that is a book.</small></br></td>
+						</tr>
+						<tr>
+						<td> (3)</td>
+						  <td>Ini Billy. </br><small> this is Billy.</small></br></td>
+						</tr>
+						<tr>
+						<td> (4)</td>
+						  <td>Itu Jane.</br><small> that is Jane.</small></br></td>
+						</tr>
+					</table>	
+				
+				<p><b>2. Kata tanya <i> Apa </i></b></p>
 				<p align="justify"> Question word <i>Apa</i> can be used to ask thing(s). <br/>
 				
 				<table cellpadding="5">
 						<tr>
 						<td> (1)</td>
-						  <td>Q : Apa itu? </br><small> What is that? </small></td>
-						  <td>A : Itu Taksi</br> <small> That is a Taxi</td>		
+						  <td>Apa itu? </br><small> What is that? </small></td>
+						  <td>Itu Taksi</br> <small> That is a Taxi</td>		
 						  </tr>
 						<tr>
 						<td>(2)</td>
-						  <td>Q : Apa ini? </br><small> what is it?</small></td>
-						  <td>A : ini buku</br> <small> That is a book</td>		
+						  <td>Apa ini? </br><small> what is it?</small></td>
+						  <td>ini buku</br> <small> That is a book</td>		
 						 </tr>
 										
 				</table><br>
@@ -402,77 +630,77 @@
 				<table cellpadding="3">
 						<tr>
 						<td> (3)</td>
-						  <td>Q : Apakah anda Billy? </br><small> Are u Billy? </small></td>
-						  <td>A : Ya, Saya Billy</br> <small> Yes , i am Billy</td>		
+						  <td>Apakah anda Billy? </br><small> Are u Billy? </small></td>
+						  <td>Ya, Saya Billy</br> <small> Yes , i am Billy</td>		
 						  </tr>
 						<tr>
 						<td>(4)
-						  <td>Q : Apakah anda Jane</br> <small> Are u Jane?</small></td>
-						  <td>A : Bukan , saya Suzan </br> <small>No , I am not. i am Suzan</td>		
+						  <td>Apakah anda Jane</br> <small> Are u Jane?</small></td>
+						  <td>Bukan , saya Suzan </br> <small>No , I am not. i am Suzan</td>		
 						 </tr>
 						 
 						 <tr>
 						<td> (5)</td>
-						  <td>Q : Apakah dia polis </br><small> Is he a police? </small></td>
-						  <td>A : Ya, dia polisi</br> <small> Yes , he is a police</td>		
+						  <td>Apakah dia polis </br><small> Is he a police? </small></td>
+						  <td>Ya, dia polisi</br> <small> Yes , he is a police</td>		
 						  </tr>
 						<tr>
 						<td>(6)
-						  <td>Q : Apakah kamu dokter <small> Are u a doctor?</small></td>
-						  <td>A : Bukan , saya guru </br> <small>No , i am not. I am a teacher</td>		
+						  <td>Apakah kamu dokter <small> Are u a doctor?</small></td>
+						  <td>Bukan , saya guru </br> <small>No , i am not. I am a teacher</td>		
 						 </tr>
 						 <td> (7)</td>
-						  <td>Q : Apakah ini formlir </br><small> Is this a form? </small></td>
-						  <td>A : Ya, ini formulir</br> <small> Yes , this is a form</td>		
+						  <td> Apakah ini formlir </br><small> Is this a form? </small></td>
+						  <td> Ya, ini formulir</br> <small> Yes , this is a form</td>		
 						  </tr>
 						<tr>
 						<td>(8)
-						  <td>Q : Apakah itu paspor <small> Is that a pasport?</small></td>
-						  <td>A : Bukan , itu dompet </br> <small>No ,that is not. That is a wallet</td>		
+						  <td>Apakah itu paspor <small> Is that a pasport?</small></td>
+						  <td>Bukan , itu dompet </br> <small>No ,that is not. That is a wallet</td>		
 						 </tr>
 				</table><br>
 				
 				<p align="justify"> Beside using <i>ya</i> or </i> bukan </i>, Question with <i>apa/apakah</i> can also using be answered by 
-				using <i> ya </i> or <i> tidak </i>. </br> For the example </p>
+				using <i> ya </i> or <i> tidak </i>. </br> For the example :</p>
 				
 				<table cellpadding="5">
 						<tr>
 						<td> (9)</td>
-						  <td>Q : Apakah Billy mau ke Indonesia? </br><small> Did Billy want to go to Indonesia? </small></td>
-						  <td>A : Ya, Billy mau ke Indonesia</br> <small> Yes , he did</td>		
+						  <td> Apakah Billy mau ke Indonesia? </br><small> Did Billy want to go to Indonesia? </small></td>
+						  <td> Ya, Billy mau ke Indonesia</br> <small> Yes , he did</td>		
 						  </tr>
 						<tr>
 						<td>(10)
-						  <td>Q : Apakah anda mengisi formulir itu?</br> <small> Did u fill in that form?</small></td>
-						  <td>A : Tidak , saya tidak mengisi formulir tersebut</br> <small>No ,i did not</td>		
+						  <td> Apakah anda mengisi formulir itu?</br> <small> Did u fill in that form?</small></td>
+						  <td> Tidak , saya tidak mengisi formulir tersebut</br> <small>No ,i did not</td>		
 						 </tr>
 						 
 						 <tr>
 						<td> (11)</td>
-						  <td>Q : Apakah Jane pergi ke Bali? </br><small> Did Jane go to Bali? </small></td>
-						  <td>A : Ya, Jane pergi ke Bali</br> <small> Yes , she did</td>		
+						  <td> Apakah Jane pergi ke Bali? </br><small> Did Jane go to Bali? </small></td>
+						  <td> Ya, Jane pergi ke Bali</br> <small> Yes , she did</td>		
 						  </tr>
 											
 				</table><br>
-				<p align ="jusify"> question in Indonesia is not only started by using question words. A simple way to make wuestion Indonesia
+				<p align ="jusify"> Question in Indonesia is not only started by using question words. A simple way to make question Indonesia
 				is by rising the final pitch of statement. <br> For the example : </p>
 				
 				<table  cellpadding="5">
 						<tr>
 						<td> (12)</td>
-						  <td>Q : Jane pergi ke Bali? </br><small> Jane went to bali? </small></td>
-						  <td>A : Ya, Jane pergi ke Bali</br> <small> Yes , she did</td>		
+						  <td>Jane pergi ke Bali? </br><small> Jane went to bali? </small></td>
+						  <td>Ya, Jane pergi ke Bali</br> <small> Yes , she did</td>		
 						  </tr>
 						<tr>
 						<td>(13)
-						  <td>Q : Billy mau ke Indonesia?</br> <small> Billy Wanted to go to Indonesia ?</small></td>
-						  <td>A : Tidak</br> <small>No ,i did not</td>		
+						  <td> Billy mau ke Indonesia?</br> <small> Billy Wanted to go to Indonesia ?</small></td>
+						  <td> Tidak</br> <small>No ,i did not</td>		
 						 </tr>
 						 
 						 					
 				</table><br>
 				
-				<p><b>Pernyataan</i></b></p>
+				<p><b>3. Pernyataan</i></b></p>
 				
 				<p align="justify"> <i> Pernyaataan </i> or statement is used to inform something to the reader or to the listener.</br></p>
 			
